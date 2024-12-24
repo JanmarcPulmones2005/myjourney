@@ -1,12 +1,18 @@
 body{
     margin: 0;
     background-color: rgb(241, 237, 237);
+    background-image: url(her.jpg);
+    background-size: cover;
+    
 }
+
+/* navbar for all pages */
 .navbar{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: grey;
+    opacity: 50%;
     
 }
 .navbar .button{
@@ -15,32 +21,72 @@ body{
     /* border: 1px solid pink; */
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: white;
+
 }
 .navbar .button:hover {
     background-color: rgb(196, 193, 193);
 }
+
+/* Main page */
 .contentholder{
     border: 1px solid pink;
     height: auto;
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(180, 180, 180);
+    border-radius: 10px;
+    justify-content: center;
+    opacity: 80%;
 }
-.contentholder .contbutt{
+.contentholder a{
     font-size: 30px;
     text-align: center;
-    width: 100%;
-    height: 70px;
-    border: 1px solid pink;;
+    width: 10px;
+    height: auto;
+    /* border: 1px solid pink; */
     text-decoration: none;
-    color: black;
+    color: white;
 }
-.contentholder .contbutt:hover{
-    background-color: rgb(124,124,124);
+.contentholder .butt{
+    margin: auto;
+    height: 70px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(146, 146, 146);
+}
+.contentholder .butt:hover{
+    background-color: rgb(77, 212, 59);
+    border-radius: 10px;
+    transform: translateY(-5px);
 }
 
+/* Music Player */
+.player{
+    margin: 20px;
+     /* border: 1px solid green; */
+     display: flex;
+     justify-content: center;
+     opacity: 50%;
+}
+
+/* Journey page */
+
+.contents{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+}
+.contents p {
+    text-indent: 50px;
+}
 
 
 
 /* For the dropdown */
+
 /* Basic styles for the dropdown */
 .dropdown {
     position: relative;
@@ -58,6 +104,7 @@ body{
     border: none;
     width: 100%;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .dropdown-button:hover {
@@ -67,13 +114,15 @@ body{
 /* Dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
-    position: absolute;
+    position:absolute;
     background-color: #f9f9f9;
     width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     text-align: justify;
     padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
 }
 
 /* Links inside the dropdown */
