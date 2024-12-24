@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Click-to-Toggle Dropdowns</title>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .dropdown-button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .dropdown-content a {
+            text-decoration: none;
+            display: block;
+            padding: 8px 10px;
+            color: black;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <div class="dropdown-button" onclick="toggleDropdown('dropdown1')">Button 1</div>
+        <div class="dropdown-content" id="dropdown1">
+            <a href="#link1">Option 1</a>
+            <a href="#link2">Option 2</a>
+            <a href="#link3">Option 3</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-button" onclick="toggleDropdown('dropdown2')">Button 2</div>
+        <div class="dropdown-content" id="dropdown2">
+            <a href="#link1">Link 1</a>
+            <a href="#link2">Link 2</a>
+            <a href="#link3">Link 3</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-button" onclick="toggleDropdown('dropdown3')">Button 3</div>
+        <div class="dropdown-content" id="dropdown3">
+            <a href="#item1">Item 1</a>
+            <a href="#item2">Item 2</a>
+            <a href="#item3">Item 3</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <div class="dropdown-button" onclick="toggleDropdown('dropdown4')">Button 4</div>
+        <div class="dropdown-content" id="dropdown4">
+            <a href="#item1">Item 1</a>
+            <a href="#item2">Item 2</a>
+            <a href="#item3">Item 3</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(id) {
+            // Close any other open dropdowns
+            const dropdowns = document.getElementsByClassName('dropdown-content');
+            for (let i = 0; i < dropdowns.length; i++) {
+                if (dropdowns[i].id !== id) {
+                    dropdowns[i].style.display = 'none';
+                }
+            }
+
+            // Toggle the clicked dropdown
+            const dropdown = document.getElementById(id);
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Close dropdowns when clicking outside
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropdown-button')) {
+                const dropdowns = document.getElementsByClassName('dropdown-content');
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].style.display = 'none';
+                }
+            }
+        };
+    </script>
+</body>
+</html>

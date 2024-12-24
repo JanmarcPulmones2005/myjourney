@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <style>
+        /* Basic styles for the dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            border: 1px solid pink;
+            width: 100%;
+        }
+
+        /* Style for the dropdown button */
+        .dropdown-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .dropdown-button:hover {
+            background-color: #3e8e41;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            text-align: justify;
+            padding: 10px;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Dropdown Menu -->
+    <div class="dropdown">
+        <button class="dropdown-button" onclick="toggleDropdown()">Day 1</button>
+        <div class="dropdown-content" id="dropdownMenu">
+            <h3 class="header">Day 1</h3>
+            <h5 class="subheader">December 23, 2024</h5>
+                <p>Tonight, officially marks the beginning on my journey on being someone you loved. We already made our final farewells and we ended our relationship properly. You decided to cease contact with me, and I completely understand. But a part of me still wants to talk to you, unfortunately I can’t anymore. And being the last to chat actually made me feel a little better, I don’t really know why but it did.
+                    It was so hard to accept everything then, but I promise I’ll be okay. I really am gonna miss you, I’m just glad you made me feel that you were mine again, even for a little while, even if it wasn’t real. That smile, that laugh, those eyes, those moments, will become memories and I’ll keep them in my heart. That made me cry HAHAAHHAHAHA, but back to work. It just hurts that when I looked back, you weren’t there. You know, I actually looked back 4 times before going, and it hurt more and more every time. But I guess it’s for the greater good.
+                    I can’t stop blaming myself for everything that happened. All those things I could have done differently, the words I could have said to fix things, to do what was needed to keep you mine.  But I failed, I failed miserably, and I apologize for that. 
+                    I just hope now, you’ll finally find the happiness you deserve, the one that I couldn’t give to you. I hope the best for the both of you, it just feels heavy knowing that you already moved on with someone new, but I am happy for you. 
+                    This pain, this heartache, the feeling of letting someone go hoping that they’ll come back, maybe that’s what they call love. I just hope destiny favors me just one time.
+                
+                That is all for now, goodbye.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        // Toggle the dropdown content
+        function toggleDropdown() {
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Optional: Close the dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-button')) {
+                const dropdowns = document.getElementsByClassName('dropdown-content');
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
